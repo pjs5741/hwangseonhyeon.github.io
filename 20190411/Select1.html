@@ -3,6 +3,7 @@
 <meta name ="viewport" content="width=device-width,initial-scale=1"/>
 <title>CAR</title></head>
 <body>
+  <fieldset>
   <legend>회사 선택</legend>
 <section>
 <select onchange="categoryChange(this)">
@@ -14,6 +15,7 @@
 <select id="good">
 <option>자동차 종류를 선택해주세요</option>
 </select>
+</fieldset>
 <script>
 function categoryChange(e) {
   var good_a = ["그렌져", "에쿠스", "제네시스", "소나타","아반떼","싼타페"];
@@ -35,4 +37,3 @@ function categoryChange(e) {
 </section>
 </body>
 </html>
-
