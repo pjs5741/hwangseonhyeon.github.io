@@ -1,0 +1,37 @@
+<!DOCTYPEhtml><!--Select1.html-->
+<html><head><meta charset="utf-8"/>
+<meta name ="viewport" content="width=device-width,initial-scale=1"/>
+<title>폼 학습</title></head>
+<body>
+<section>
+<select onchange="categoryChange(this)">
+  <option>자동차를 선택해주세요</option>
+  <option value="a">현대</option>
+  <option value="b">기아</option>
+  <option value="c">쌍용</option>
+</select>
+<select id="good">
+<option>자동차 종류를 선택해주세요</option>
+</select>
+<script>
+function categoryChange(e) {
+  var good_a = ["그렌져", "에쿠스", "제네시스", "소나타"];
+  var good_b = ["k9", "k7", "k5", "k3"];
+  var good_c = ["렉스톤", "코란도", "티볼리", "체어맨", "코란도 스포츠"];
+  var target = document.getElementById("good");
+  if(e.value == "a") var d = good_a;
+  else if(e.value == "b") var d = good_b;
+  else if(e.value == "c") var d = good_c;
+  target.options.length = 0;
+  for (x in d) {
+    var opt = document.createElement("option");
+    opt.value = d[x];
+    opt.innerHTML = d[x];
+    target.appendChild(opt);
+  } 
+}
+</script>
+</section>
+</body>
+</html>
+
